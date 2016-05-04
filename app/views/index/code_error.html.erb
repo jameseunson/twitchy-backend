@@ -1,0 +1,18 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-sm-12">
+
+			<%= image_tag('twitchy-logo', :retina => true, :alt => "Twitchy Logo", :class => "login-logo") %>
+			<p class="login-text">Enter your code below to proceed with login:</p>
+
+			<hr />
+
+			<div class="alert alert-danger">
+				<p>Could not process your code. It may have expired or was entered incorrectly. Please try generating a new code from the Twitchy app.</p>
+			</div>
+			
+			<%= render :partial => "code_form" %>
+
+		</div>
+	</div>
+</div>

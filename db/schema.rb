@@ -11,13 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160503080354) do
+ActiveRecord::Schema.define(version: 20160504045930) do
 
   create_table "codes", force: :cascade do |t|
     t.string   "code"
     t.datetime "expires"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "state"
+    t.string   "user_token"
   end
 
 end

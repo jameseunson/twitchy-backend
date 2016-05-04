@@ -1,0 +1,14 @@
+<%= form_tag(code_token_save_path, :class => "form form-horizontal", :role => "form", :id => "hash-form", :style => "display: none;") do |f| %>
+	<div class="col-sm-12">
+		<div class="form-group">
+			<%= hidden_field_tag :hash, nil, { :class => "form-control" } %>								
+		</div>
+	</div>				
+<% end %>
+
+<script type="text/javascript">
+	var hash = document.location.hash;
+
+	$("input#hash").val(hash);
+	$("form#hash-form").submit();
+</script>

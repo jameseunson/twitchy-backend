@@ -1,0 +1,1 @@
+{ "success": <%= @success ? "true" : "false" %><% if @success %>, "authenticated": <%= @code.user_token != nil ? "true" : "false" %><% if @code.user_token != nil %>, "token": "<%= @code.user_token %>"<% end %><% end %> }

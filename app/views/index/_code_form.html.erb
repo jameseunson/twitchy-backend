@@ -1,0 +1,12 @@
+<%= form_tag(process_code_path, :class => "form form-horizontal", :role => "form", :id => "code-form") do |f| %>			
+	<div class="col-sm-12">
+		<div class="form-group">
+			<%= text_field_tag :code, nil, { :class => "form-control input-lg", :placeholder => "Code", :maxlength => 9 } %>								
+		</div>
+	</div>	
+	<div class="col-sm-12">
+		<div class="form-group">
+			<button class="btn btn-block btn-lg" type="submit">Login</button>								
+		</div>
+	</div>				
+<% end %>

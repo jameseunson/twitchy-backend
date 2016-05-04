@@ -1,14 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>TwitchyBackend</title>
+  <title>Twitchy</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
+	<meta name="viewport" content="width=device-width" />   
 </head>
 <body>
 
-<%= yield %>
+<body>
+
+    <div id="wrapper" class="wrapper <%= params[:controller] %>.<%= params[:action] %>">      
+
+        <div id="page-wrapper" class="gray-bg <%= @extra_class %>">
+
+            <% flash.each do |key, value| %>
+                <div class="alert alert-<%= key %> alert-dismissible" role="alert">
+
+                    <button type="button" class="close" data-dismiss="alert">
+                      <span aria-hidden="true">&times;</span>
+                      <span class="sr-only">Close</span>
+                    </button>
+                    
+                    <%= value %>
+                </div>
+            <% end %>
+
+            <%= yield %>
+        </div>
+    </div>
+</body>
 
 </body>
 </html>
