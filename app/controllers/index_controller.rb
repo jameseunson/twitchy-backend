@@ -69,7 +69,7 @@ class IndexController < ApplicationController
 
 		request_url = "https://api.twitch.tv/kraken/oauth2/authorize?response_type=token" +
 			"&client_id=#{Rails.application.secrets.twitch_client_id}" +
-			"&redirect_uri=http://localhost:3000/code/token"+
+			"&redirect_uri=http://twitchy.jeon.com.au/code/token"+
 		    "&scope=user_read+user_subscriptions+user_follows_edit+chat_login"+
 		    "&state=#{@code.state}"
 
